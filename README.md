@@ -1,6 +1,6 @@
 # CodeCircuit Travel Projects Submission
 
-This repository contains a collection of frontend web applications developed for the CodeCircuit Hackathon, all centered around a travel theme.
+This repository contains a collection of functionalities developed for the CodeCircuit Hackathon, all centered around a travel theme.
 
 The projects demonstrate various frontend skills and concepts, focusing on user experience, visual design, and functionality.
 
