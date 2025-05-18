@@ -6,11 +6,11 @@ const span = document.getElementsByClassName('close')[0];
 
 // Sample image data (replace with your own images)
 const images = [
-    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/travel 1.jpeg', caption: 'Beautiful Sunset' },
-    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/download.jpeg', caption: 'Mountain View' },
-    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/travel 3.jpeg', caption: 'Cityscape at Night' },
-    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/travel 2.webp', caption: 'Tropical Beach' },
-    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/travel 4.jpeg', caption: 'Forest Path' }
+    { src: 'travel_gallery/travel 1.jpeg', caption: 'Beautiful Sunset' },
+    { src: 'travel_gallery/download.jpeg', caption: 'Mountain View' },
+    { src: 'travel_gallery/travel 3.jpeg', caption: 'Cityscape at Night' },
+    { src: 'travel_gallery/travel 2.webp', caption: 'Tropical Beach' },
+    { src: 'travel_gallery/travel 4.jpeg', caption: 'Forest Path' }
 ];
 
 // Function to render gallery images
