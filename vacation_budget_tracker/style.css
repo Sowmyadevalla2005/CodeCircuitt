@@ -1,0 +1,161 @@
+:root {
+    --primary-color: #f39c12; /* Orange */
+    --secondary-color: #2ecc71; /* Green */
+    --background-color: #f8f9fa; /* Light grey background */
+    --container-bg: #ffffff; /* White container */
+    --text-color: #343a40; /* Dark grey text */
+    --heading-color: #e67e22; /* Darker orange for heading */
+    --border-color: #dee2e6; /* Light grey border */
+    --box-shadow: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px 20px; /* Adjusted padding */
+    background-color: var(--background-color); /* Light grey background */
+    color: var(--text-color); /* Dark grey text */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px; /* Max width */
+    width: 100%;
+    background: var(--container-bg); /* White background */
+    padding: 30px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px var(--box-shadow); /* Subtle shadow */
+}
+
+h1 {
+    text-align: center;
+    color: var(--heading-color); /* Darker orange heading */
+    margin-bottom: 30px; /* Space below heading */
+    font-size: 2.4em; /* Font size */
+}
+
+.input-section {
+    display: flex; /* Flexbox for layout */
+    gap: 15px; /* Space between inputs and button */
+    margin-bottom: 30px; /* Space below input section */
+    flex-wrap: wrap; /* Allow wrapping */
+    align-items: center; /* Vertically align items */
+}
+
+.input-section input[type="text"],
+.input-section input[type="number"] {
+    flex-grow: 1; /* Allow inputs to grow */
+    padding: 10px 12px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid var(--border-color); /* Light border */
+    font-size: 1em;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition */
+    min-width: 120px; /* Minimum width */
+}
+
+.input-section input[type="text"]:focus,
+.input-section input[type="number"]:focus {
+    border-color: var(--primary-color); /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.3); /* Subtle orange shadow */
+}
+
+.input-section button {
+    padding: 10px 20px; /* Padding */
+    background-color: var(--primary-color); /* Orange background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Indicate clickable */
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Transition */
+}
+
+.input-section button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+.input-section button:active {
+     background-color: #c0392b; /* Even darker orange when active */
+}
+
+.budget-list-section h2 {
+    color: var(--text-color); /* Dark grey color */
+    margin-top: 0;
+    margin-bottom: 15px; /* Space below subheading */
+    border-bottom: 1px solid var(--border-color); /* Light border */
+    padding-bottom: 5px; /* Padding below subheading */
+    font-size: 1.6em; /* Font size */
+}
+
+#budget-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0; /* Space below list */
+}
+
+#budget-items-list li {
+    background: #e9ecef; /* Lighter grey background */
+    padding: 12px 15px; /* Adjusted padding */
+    margin-bottom: 10px; /* Space below list item */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between description and cost */
+    align-items: center; /* Vertically align items */
+    border-left: 5px solid var(--secondary-color); /* Green accent on the left */
+}
+
+#budget-items-list li span {
+    font-weight: normal; /* Normal font weight for description */
+    color: var(--text-color); /* Dark grey text */
+}
+
+#budget-items-list li span:last-child { /* Style for the cost */
+    font-weight: bold; /* Bold font weight for cost */
+    color: var(--primary-color); /* Orange color for cost */
+}
+
+.total {
+    text-align: right; /* Align total to the right */
+    font-size: 1.5em; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    color: var(--heading-color); /* Darker orange color */
+    padding-top: 15px; /* Space above total */
+    border-top: 2px solid var(--primary-color); /* Top border */
+}
+
+.total span {
+    color: var(--secondary-color); /* Green color for the total amount */
+}
+
+/* Basic Responsiveness */
+@media (max-width: 576px) {
+    .input-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items */
+        gap: 10px;
+    }
+
+    .input-section input[type="text"],
+    .input-section input[type="number"],
+    .input-section button {
+        width: 100%; /* Full width on small screens */
+        min-width: 0;
+    }
+
+    #budget-items-list li {
+        flex-direction: column; /* Stack description and cost */
+        align-items: flex-start; /* Align items to the start */
+        gap: 5px;
+    }
+
+    #budget-items-list li span:last-child {
+        font-size: 1.1em; /* Slightly smaller font for cost on small screens */
+    }
+} 

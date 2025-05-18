@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packing Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Packing Checklist</h1>
+        <div class="add-item-section">
+            <input type="text" id="new-item-description" placeholder="New item description">
+            <select id="new-item-category">
+                <option value="Clothes">Clothes</option>
+                <option value="Toiletries">Toiletries</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Documents">Documents</option>
+                <!-- Add options for other categories if you add them in JS -->
+            </select>
+            <button id="add-item-btn">Add Item</button>
+        </div>
+        <div id="categories">
+            <!-- Categories and items will be added here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

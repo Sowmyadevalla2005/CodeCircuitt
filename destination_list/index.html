@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Destinations</h1>
+        <div class="filters">
+            <label for="region-filter">Filter by Region:</label>
+            <select id="region-filter">
+                <option value="all">All Regions</option>
+                <!-- Options will be added by JavaScript -->
+            </select>
+        </div>
+        <div class="search-section">
+            <label for="destination-search">Search Destinations:</label>
+            <input type="text" id="destination-search" placeholder="Enter destination name">
+        </div>
+        <div class="add-destination-section">
+            <h2>Add New Destination</h2>
+            <input type="text" id="new-destination-name" placeholder="Destination Name (with emoji!)">
+            <input type="text" id="new-destination-region" placeholder="Region">
+            <button id="add-destination-btn">Add Destination</button>
+        </div>
+        <div id="destination-list">
+            <!-- Destinations will be added here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

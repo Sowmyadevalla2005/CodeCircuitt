@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Grey */
+    --background-color: #e9ecef; /* Light grey background */
+    --container-bg: #ffffff; /* White container */
+    --text-color: #212529; /* Dark text */
+    --heading-color: #0056b3; /* Darker blue heading */
+    --border-color: #ced4da; /* Light border */
+    --input-focus-shadow: rgba(0, 123, 255, 0.25);
+    --item-bg: #f8f9fa; /* Very light grey for items */
+    --item-border: #dee2e6; /* Lighter border for items */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color); /* Light grey background */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: var(--container-bg); /* White container */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--heading-color); /* Darker blue heading */
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.controls {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+
+.controls input[type="text"] {
+    flex-grow: 1; /* Allow input to grow */
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    min-width: 150px; /* Minimum width */
+}
+
+.controls input[type="text"]:focus {
+    border-color: var(--primary-color); /* Highlight on focus */
+    box-shadow: 0 0 0 0.2rem var(--input-focus-shadow);
+}
+
+#gate-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gate-item {
+    background: var(--item-bg); /* Very light grey background */
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--item-border); /* Lighter border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+}
+
+.gate-item:hover {
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow on hover */
+}
+
+.gate-item span {
+    font-weight: bold;
+    color: var(--primary-color); /* Blue color for key info */
+}
+
+.gate-item .flight-info {
+    font-weight: normal;
+    color: var(--text-color);
+    font-size: 0.95em;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .controls input[type="text"] {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .gate-item {
+        flex-direction: column; /* Stack info vertically */
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .gate-item span,
+    .gate-item .flight-info {
+        width: 100%; /* Full width */
+    }
+} 

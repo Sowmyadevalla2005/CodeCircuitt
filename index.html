@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCircuit Travel Project Submission</title>
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #0288d1;
+            --accent-blue: #0077cc;
+            --light-blue: #e1f5fe;
+            --lighter-blue: #b3e5fc;
+            --text-color: #333;
+            --heading-color: #003f7f;
+            --link-color: #01579b;
+            --link-hover-color: #003f7f;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: var(--light-blue); /* Light blue background */
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background-image: url('https://images.unsplash.com/photo-1528184031648-89c81a53020a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Example travel background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keep background fixed on scroll */
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border: 2px solid var(--accent-blue); /* Accent border */
+            backdrop-filter: blur(5px); /* Add a subtle blur effect */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        h1 {
+            color: var(--heading-color); /* Darker blue for heading */
+            margin-bottom: 20px;
+            font-size: 2.8em; /* Slightly larger font */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+        }
+
+        .intro-text {
+            font-size: 1.2em; /* Slightly larger font */
+            color: var(--text-color); /* Slightly darker text for better contrast */
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .projects-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .project-item {
+            background-color: var(--light-blue); /* Lighter, more vibrant blue for list items */
+            margin-bottom: 15px;
+            padding: 20px 25px; /* Increased padding */
+            border-radius: 10px; /* More rounded corners */
+            border-left: 6px solid var(--secondary-blue); /* More prominent blue accent */
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+            cursor: pointer; /* Indicate it's clickable */
+        }
+
+        .project-item:hover {
+            transform: translateY(-7px) scale(1.02); /* Lift up and slightly scale */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            background-color: var(--lighter-blue); /* Even lighter blue on hover */
+        }
+
+        .project-item a {
+            text-decoration: none;
+            color: var(--link-color); /* Even darker blue for links */
+            font-size: 1.4em; /* Larger link text */
+            font-weight: 
+            bold;
+            display: block; /* Make the whole item clickable */
+            margin-bottom: 5px;
+        }
+
+        .project-item a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            color: var(--link-hover-color); /* Darker color on hover */
+        }
+
+        .project-description {
+            font-size: 1em; /* Slightly larger description text */
+            color: var(--text-color); /* Slightly darker color */
+            margin-top: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .intro-text {
+                font-size: 1em;
+            }
+
+            .project-item {
+                padding: 15px 20px;
+            }
+
+            .project-item a {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CodeCircuit Hackathon Submission</h1>
+        <p class="intro-text">
+            Welcome! Explore my frontend web application built for the CodeCircuit Hackathon, focusing on the Travel theme. Each project demonstrates a commitment to strong user experience, appealing visual design, solid functionality, and clean code. Dive in and see the journey!
+        </p>
+        <ul class="projects-list">
+            <li class="project-item">
+                <a href="packing_checklist/index.html">✈️ Packing Checklist with Item Categories</a>
+                <p class="project-description">Streamline your packing process with a clear, categorized checklist. Easily mark items as you go!</p>
+            </li>
+            <li class="project-item">
+                <a href="destination_list/index.html">🌍 Destination Explorer</a>
+                <p class="project-description">Discover exciting travel spots with a list filterable by region and adorned with relevant emojis.</p>
+            </li>
+            <li class="project-item">
+                <a href="currency_converter/index.html">💱 Quick Currency Converter</a>
+                <p class="project-description">A handy tool for on-the-go currency conversion using fixed, representative values.</p>
+            </li>
+            <li class="project-item">
+                <a href="trip_planner/index.html">📅 Trip Countdown & Daily Notes</a>
+                <p class="project-description">Anticipate your departure and jot down plans for each day leading up to and during your trip.</p>
+            </li>
+            <li class="project-item">
+                <a href="travel_gallery/index.html">📸 Interactive Travel Gallery</a>
+                <p class="project-description">Browse cherished travel memories in a gallery where images expand with a click.</p>
+            </li>
+            <li class="project-item">
+                <a href="vacation_budget_tracker/index.html">💰 Vacation Budget Manager</a>
+                <p class="project-description">Keep track of your travel expenses and monitor your total spending with ease.</p>
+            </li>
+            <li class="project-item">
+                <a href="language_cheat_sheet/index.html">🗣️ Travel Language Guide</a>
+                <p class="project-description">Quickly access essential phrases tailored to different travel scenarios.</p>
+            </li>
+            <li class="project-item">
+                <a href="itinerary_board/index.html">📋 Dynamic Itinerary Board</a>
+                <p class="project-description">Organize your trip schedule visually and reorder activities with a simple drag-and-drop interface.</p>
+            </li>
+            <li class="project-item">
+                <a href="airport_navigation/index.html">✈️ Airport Info Mockup</a>
+                <p class="project-description">Simulates airport gate information with a filtering feature for quick lookups.</p>
+            </li>
+            <li class="project-item">
+                <a href="moodboard_builder/index.html">✨ Creative Trip Moodboard</a>
+                <p class="project-description">Build a visual representation of your trip inspiration by placing and arranging stickers with timestamps.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #6A5ACD; /* Slate Blue */
+    --secondary-color: #FFD700; /* Gold */
+    --background-color: #E6E6FA; /* Lavender */
+    --card-background: #FFFFFF;
+    --text-color: #333;
+    --border-color: #ccc;
+    --button-hover-color: #5A4F9F; /* Darker Slate Blue */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.container {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.container h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    font-size: 1rem;
+}
+
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.5); /* Primary color with transparency */
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+button:active {
+    background-color: #483D8B; /* Even darker Slate Blue */
+}
+
+#converted-amount {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    min-height: 1.2em; /* Reserve space to prevent layout shift */
+}
+
+/* Basic Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+} 

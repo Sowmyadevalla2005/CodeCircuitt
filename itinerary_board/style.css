@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #3f51b5; /* Indigo */
+    --secondary-color: #00bcd4; /* Cyan */
+    --background-color: #e8eaf6; /* Light indigo background */
+    --container-bg: #ffffff; /* White container */
+    --text-color: #212121; /* Dark grey text */
+    --heading-color: #1a237e; /* Darker indigo for headings */
+    --day-header-bg: #c5cae9; /* Lighter indigo for day headers */
+    --activity-bg: #e3f2fd; /* Very light blue for activities */
+    --border-color: #b0bec5; /* Blue grey border */
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --drag-over-border: #00bcd4; /* Cyan border for drag over */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px 20px;
+    background-color: var(--background-color); /* Light indigo background */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: var(--container-bg); /* White container */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--box-shadow);
+}
+
+h1 {
+    text-align: center;
+    color: var(--heading-color); /* Darker indigo heading */
+    margin-bottom: 30px;
+    font-size: 2.6em;
+}
+
+#itinerary-board {
+    /* Basic styling for the board */
+}
+
+.day-container {
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.day-header {
+    background-color: var(--day-header-bg); /* Lighter indigo */
+    padding: 15px 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--heading-color); /* Darker indigo */
+    cursor: pointer; /* Indicate clickable/collapsible */
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    background: var(--activity-bg); /* Very light blue */
+    padding: 12px 20px;
+    margin-bottom: 1px; /* Small space between items */
+    border-bottom: 1px solid #e0e0e0; /* Light grey border */
+    cursor: grab; /* Indicate draggable */
+    transition: background-color 0.2s ease;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item:hover {
+    background-color: #bbdefb; /* Lighter blue on hover */
+}
+
+.activity-item.dragging {
+    opacity: 0.5; /* Reduce opacity when dragging */
+}
+
+/* Optional: Style for drag over effect on lists */
+.activity-list.drag-over {
+    background-color: #e0f7fa; /* Very light cyan */
+    border-top: 2px dashed var(--drag-over-border); /* Cyan dashed border */
+    border-bottom: 2px dashed var(--drag-over-border); /* Cyan dashed border */
+}
+
+/* Basic Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .day-header {
+        font-size: 1.2em;
+        padding: 12px 15px;
+    }
+
+    .activity-item {
+        padding: 10px 15px;
+    }
+} 

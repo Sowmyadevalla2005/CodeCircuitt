@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #8e44ad; /* Amethyst */
+    --secondary-color: #3498db; /* Peter River */
+    --background-color: #f4ecf7; /* Light purple background */
+    --container-bg: #ffffff; /* White container */
+    --text-color: #333; /* Dark grey text */
+    --heading-color: #673ab7; /* Deep Purple */
+    --palette-bg: #e0e0e0; /* Light grey for palette */
+    --moodboard-border: #ccc; /* Light grey border */
+    --sticker-bg: #9b59b6; /* Wisteria */
+    --sticker-text: #ffffff; /* White text on stickers */
+    --placed-sticker-bg: #ffffff; /* White background for placed stickers */
+    --timestamp-color: #7f8c8d; /* Grey */
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --moodboard-dragover-border: #3498db; /* Blue border on drag over */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px var(--box-shadow);
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2.6em;
+}
+
+.sticker-palette {
+    flex: 0 0 250px;
+    padding: 20px;
+    border: 1px solid var(--moodboard-border);
+    border-radius: 8px;
+    background-color: var(--palette-bg);
+    align-self: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sticker-palette h2 {
+    margin-top: 0;
+    color: var(--heading-color);
+    border-bottom: 1px solid var(--moodboard-border);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.sticker {
+    background-color: var(--sticker-bg);
+    color: var(--sticker-text);
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: grab;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sticker:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sticker:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+.moodboard-area {
+    flex: 1;
+    min-height: 600px;
+    border: 2px dashed var(--moodboard-border);
+    border-radius: 8px;
+    position: relative;
+    background-color: var(--placed-sticker-bg);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.moodboard-area.drag-over {
+    border-color: var(--moodboard-dragover-border);
+}
+
+.placed-sticker {
+    position: absolute;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: var(--placed-sticker-bg);
+    cursor: grab;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.placed-sticker:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.placed-sticker:active {
+    cursor: grabbing;
+    z-index: 10;
+    transform: scale(1.02);
+}
+
+.placed-sticker.dragging {
+    opacity: 0.7;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.placed-sticker .timestamp {
+    display: block;
+    font-size: 0.8em;
+    color: var(--timestamp-color);
+    margin-top: 8px;
+    text-align: right;
+    font-style: italic;
+}
+
+.placed-sticker .remove-sticker-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7em;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease;
+    z-index: 11;
+}
+
+.placed-sticker .remove-sticker-btn:hover {
+    background-color: #c0392b;
+}
+
+.resize-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-color);
+    bottom: 0;
+    right: 0;
+    cursor: nwse-resize;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sticker-palette {
+        flex: none;
+        width: 100%;
+    }
+
+    .moodboard-area {
+        flex: none;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .sticker-palette h2 {
+        font-size: 1.3em;
+    }
+
+    .placed-sticker {
+        padding: 10px;
+    }
+
+    .placed-sticker .timestamp {
+        font-size: 0.7em;
+    }
+}

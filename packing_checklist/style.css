@@ -1,0 +1,180 @@
+:root {
+    --primary-color: #3498db; /* A pleasant blue */
+    --secondary-color: #2ecc71; /* Green for packed items */
+    --background-color: #ecf0f1; /* Light grey background */
+    --container-bg: #ffffff; /* White container background */
+    --text-color: #34495e; /* Dark grey for general text */
+    --heading-color: #2c3e50; /* Even darker grey for headings */
+    --border-color: #bdc3c7; /* Light grey border */
+    --hover-color: #f2f6f8; /* Very light grey for hover */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px 20px; /* Adjusted padding */
+    background-color: var(--background-color); /* Light grey background */
+    color: var(--text-color); /* Dark grey text */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px; /* Slightly reduced max-width */
+    width: 100%;
+    margin: 0 auto; /* Center container */
+    background: var(--container-bg); /* White background */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: var(--heading-color); /* Darker heading color */
+    margin-bottom: 30px; /* Increased bottom margin */
+    font-size: 2.2em; /* Slightly larger font size */
+}
+
+.add-item-section {
+    display: flex; /* Use flexbox for layout */
+    gap: 10px; /* Space between elements */
+    margin-bottom: 30px; /* Space below the section */
+    padding-bottom: 20px; /* Padding below the section */
+    border-bottom: 1px solid var(--border-color); /* Separator line */
+    flex-wrap: wrap; /* Allow items to wrap */
+    align-items: center; /* Vertically align items */
+}
+
+.add-item-section input[type="text"],
+.add-item-section select {
+    flex-grow: 1; /* Allow input and select to grow */
+    padding: 10px 12px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid var(--border-color); /* Light border */
+    font-size: 1em;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition */
+    min-width: 150px; /* Minimum width */
+}
+
+.add-item-section input[type="text"]:focus,
+.add-item-section select:focus {
+    border-color: var(--primary-color); /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Subtle blue shadow */
+}
+
+.add-item-section button {
+    padding: 10px 20px; /* Padding */
+    background-color: var(--primary-color); /* Primary blue */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Indicate clickable */
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-item-section button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.category {
+    margin-bottom: 25px; /* Increased bottom margin */
+    border-bottom: 1px solid var(--border-color); /* Lighter border */
+    padding-bottom: 20px; /* Increased bottom padding */
+}
+
+.category:last-child {
+    border-bottom: none; /* No border for the last category */
+    padding-bottom: 0; /* No padding for the last category */
+}
+
+.category h2 {
+    color: var(--primary-color); /* Primary blue for category titles */
+    margin-top: 0;
+    margin-bottom: 15px; /* Increased bottom margin */
+    font-size: 1.5em; /* Slightly larger font size */
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    background: var(--hover-color); /* Very light grey background */
+    padding: 12px 15px; /* Adjusted padding */
+    margin-bottom: 10px; /* Increased bottom margin */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease; /* Added box-shadow to transition */
+    border: 1px solid transparent; /* Add a transparent border */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between description and button */
+    align-items: center; /* Vertically align items */
+}
+
+.item .item-description {
+    flex-grow: 1; /* Allow description to take up space */
+    margin-right: 10px; /* Space between description and button */
+}
+
+.item .remove-item-btn {
+    background-color: #e74c3c; /* Red color for remove button */
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Smaller padding for button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 0.8em; /* Smaller font size */
+    transition: background-color 0.3s ease;
+}
+
+.item .remove-item-btn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.item:hover {
+    background-color: var(--border-color); /* Light grey on hover */
+    transform: translateY(-5px) rotate(0deg); /* Adjusted transform */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+}
+
+.item.packed {
+    background-color: var(--secondary-color); /* Green background for packed */
+    text-decoration: line-through; /* Strikethrough text */
+    color: #ffffff; /* White text for packed items */
+    border-color: #27ae60; /* Darker green border */
+    opacity: 0.8; /* Slight transparency */
+}
+
+.item.packed:hover {
+    background-color: #27ae60; /* Darker green on hover for packed */
+    transform: translateX(0); /* No movement on hover when packed */
+}
+
+/* Basic Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .category h2 {
+        font-size: 1.3em;
+    }
+
+    .item {
+        padding: 10px 12px;
+    }
+} 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vacation Budget Tracker</h1>
+        <div class="input-section">
+            <input type="text" id="item-description" placeholder="Item Description">
+            <input type="number" id="item-cost" placeholder="Cost" min="0">
+            <button id="add-item-btn">Add Item</button>
+        </div>
+
+        <div class="budget-list-section">
+            <h2>Expenses</h2>
+            <ul id="budget-items-list">
+                <!-- Budget items will be added here by JavaScript -->
+            </ul>
+            <div class="total">
+                <strong>Total:</strong> <span id="total-cost">0.00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

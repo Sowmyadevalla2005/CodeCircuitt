@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #0077cc; /* A vibrant blue for primary elements */
+    --secondary-color: #4CAF50; /* A pleasant green for accents */
+    --background-color: #e0f7fa; /* Very light blue, subtle */
+    --container-bg: #ffffff; /* White container */
+    --text-color: #333; /* Dark grey text */
+    --heading-color: #01579b; /* Darker blue for headings */
+    --border-color: #b2ebf2; /* Light blue border */
+    --box-shadow: rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1517760444937-f4202718b76b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Example travel background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep background fixed */
+}
+
+.container {
+    max-width: 700px; /* Consistent max-width */
+    width: 100%;
+    margin: 0 auto;
+    background: var(--container-bg); /* White background */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px var(--box-shadow); /* Softer shadow */
+}
+
+h1 {
+    text-align: center;
+    color: var(--heading-color); /* Deep blue heading */
+    margin-bottom: 30px; /* Increased margin */
+    font-size: 2.5em; /* Larger heading */
+}
+
+.filters {
+    margin-bottom: 25px; /* Increased margin */
+    padding-bottom: 20px; /* Increased padding */
+    border-bottom: 1px solid var(--border-color); /* Light border */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    gap: 15px; /* Space between filter elements */
+}
+
+.filters label {
+    font-weight: bold;
+    color: var(--heading-color); /* Match heading color */
+    font-size: 1.1em;
+}
+
+.filters select {
+    padding: 10px 15px; /* Increased padding */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid var(--border-color); /* Light border */
+    font-size: 1em;
+    cursor: pointer; /* Indicate it's clickable */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease;
+}
+
+.filters select:focus {
+    border-color: var(--primary-color); /* Highlight on focus */
+}
+
+#destination-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.destination-item {
+    background: linear-gradient(to right, var(--secondary-color) 5px, var(--background-color) 5px); /* Accent color on the left */
+    background-color: var(--container-bg); /* White background */
+    padding: 15px 20px; /* Adjusted padding */
+    margin-bottom: 12px; /* Increased margin */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px var(--box-shadow); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.destination-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px var(--box-shadow); /* More prominent shadow on hover */
+}
+
+.destination-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--primary-color); /* Primary color for destination names */
+    font-size: 1.3em;
+}
+
+.destination-item p {
+    margin: 0;
+    font-size: 1em; /* Slightly larger description text */
+    color: var(--text-color); /* Dark grey text */
+}
+
+/* Basic Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .filters {
+        flex-direction: column; /* Stack filter elements vertically */
+        align-items: stretch; /* Stretch items to fill container */
+        gap: 10px;
+    }
+
+    .destination-item {
+        padding: 12px 15px;
+    }
+
+    .destination-item h3 {
+        font-size: 1.1em;
+    }
+} 
