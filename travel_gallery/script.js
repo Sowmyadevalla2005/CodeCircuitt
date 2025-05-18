@@ -6,11 +6,11 @@ const span = document.getElementsByClassName('close')[0];
 
 // Sample image data (replace with your own images)
 const images = [
-    { src: 'https://via.placeholder.com/300/FF5733/FFFFFF?text=Image+1', caption: 'Beautiful Sunset' },
-    { src: 'https://via.placeholder.com/300/33FF57/FFFFFF?text=Image+2', caption: 'Mountain View' },
-    { src: 'https://via.placeholder.com/300/3357FF/FFFFFF?text=Image+3', caption: 'Cityscape at Night' },
-    { src: 'https://via.placeholder.com/300/F333FF/FFFFFF?text=Image+4', caption: 'Tropical Beach' },
-    { src: 'https://via.placeholder.com/300/FFC300/FFFFFF?text=Image+5', caption: 'Forest Path' }
+    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/travel 1.jpeg', caption: 'Beautiful Sunset' },
+    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/download.jpeg', caption: 'Mountain View' },
+    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/travel 3.jpeg', caption: 'Cityscape at Night' },
+    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/travel 2.webp', caption: 'Tropical Beach' },
+    { src: 'C:/Users/sowmy/codecircuit/travel_gallery/travel 4.jpeg', caption: 'Forest Path' }
 ];
 
 // Function to render gallery images
